@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Files</title>
+</head>
+<body>
+    <h1>List of Uploaded Files</h1>
+    {% if files %}
+    <ul>
+        {% for file in files %}
+        <li>{{ file.id }} - {{ file.filename }} - {{ file.created_at }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No files found.</p>
+    {% endif %}
+    <a href="/">Back to Upload Form</a>
+</body>
+</html>
